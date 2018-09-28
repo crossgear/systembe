@@ -1,2 +1,8 @@
+*.iml
+*.ipr
+*.iws
 .idea/
-.Pipfile
+out/
+local.properties
+
+Pipfile
