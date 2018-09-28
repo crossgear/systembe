@@ -14,6 +14,7 @@ class Empresas(models.Model):
     telefono = models.CharField(max_length=12, blank=True, null=True)
     celular = models.CharField(max_length=12, blank=True, null=True)
     direccion = models.CharField(max_length=150)
+    actividad_economica = models.CharField(max_length=100)
 
     class Meta:
         managed = False

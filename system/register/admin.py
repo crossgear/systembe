@@ -9,8 +9,8 @@ class PersonaAdmin(admin.ModelAdmin):
         return obj.fecha_nac
 
 class EmpresaAdmin(admin.ModelAdmin):
-    list_display = ('nombre_razon_social','ruc', 'telefono', 'celular', 'direccion')
-    search_fields = ['nombre_razon_social','ruc', 'telefono', 'celular', 'direccion']
+    list_display = ('nombre_razon_social','ruc', 'telefono', 'celular', 'direccion', 'actividad_economica')
+    search_fields = ['nombre_razon_social','ruc', 'telefono', 'celular', 'direccion', 'actividad_economica']
 
 class OperadorAdmin(admin.ModelAdmin):
     list_display = ('nombres', 'Apellidos', 'Cedula', 'Telefono', 'Celular', 'Direccion', 'fecha_nacimiento', 'empresa')
