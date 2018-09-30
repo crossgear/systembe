@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
     'register',
+    'admin_reorder',
+    
     
 
 ]
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 ]
 
 ROOT_URLCONF = 'system.urls'
@@ -136,3 +138,30 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+ADMIN_REORDER = (
+   
+    # Autorizaciones
+    {'app': 'auth', 'label': 'Autorizaciones'},
+
+    # Registro
+    {'app': 'register', 'label': 'Registro',
+    'models': ('register.Personas', 'register.Empresas', 
+    'register.Operadores')},
+
+    # Transporte
+    {'app': 'register', 'label': 'Transporte',
+    'models': ('register.Buses', 'register.TipoBuses', 
+    'register.Lineas', 'register.Trayectos')},
+
+    # Operaciones
+    {'app': 'register', 'label': 'Operaciones',
+    'models': ('register.Caja', 'register.Comprobantes', 
+    'register.Lectores', 'register.Movimientos'
+    , 'register.TipoPago', 'register.Timbrados')},
+
+    # Tarjetas
+    {'app': 'register', 'label': 'Tarjetas',
+    'models': ('register.Tarjetas', 'register.TipoTarjeta')},
+    
+)

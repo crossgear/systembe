@@ -45,9 +45,12 @@ class OperadorAdmin(admin.ModelAdmin):
         return obj.id_personas.fecha_nac
 
 
+       
+
 admin.site.site_title = 'Panel'
 admin.site.index_title = 'Panel Principal'
-admin.site.site_header = 'XBUS'
+admin.site.site_header = 'XBUS' 
+admin.site.site_url = None
 admin.site.register(Personas, PersonaAdmin)
 admin.site.register(Empresas, EmpresaAdmin)
 admin.site.register(Operadores, OperadorAdmin)

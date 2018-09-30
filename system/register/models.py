@@ -26,7 +26,6 @@ class Buses(models.Model):
     def __str__(self):
         return self.coche_numero
 
-
 class Caja(models.Model):
     id = models.IntegerField(primary_key=True)
     numero = models.CharField(max_length=45)
@@ -51,7 +50,7 @@ class Comprobantes(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'Comprobantes'
+        db_table = 'comprobantes'
         verbose_name = 'Comprobante'
         verbose_name_plural = 'Comprobantes'
     def __str__(self):
