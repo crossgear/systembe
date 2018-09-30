@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Personas, Empresas, Operadores
+from .models import Personas, Empresas, Operadores, Buses, Caja, Comprobantes, Lectores, Lineas, Movimientos, Tarjetas, Timbrados, TipoBuses, TipoPago, TipoTarjeta, Trayectos
 
 class PersonaAdmin(admin.ModelAdmin):
     list_display = ('nombres', 'apellidos', 'cedula', 'telefono', 'celular', 'direccion', 'fecha_nacimiento')
@@ -51,3 +51,16 @@ admin.site.site_header = 'XBUS'
 admin.site.register(Personas, PersonaAdmin)
 admin.site.register(Empresas, EmpresaAdmin)
 admin.site.register(Operadores, OperadorAdmin)
+admin.site.register(Buses)
+admin.site.register(Caja)
+admin.site.register(Comprobantes)
+admin.site.register(Lectores)
+admin.site.register(Lineas)
+admin.site.register(Movimientos)
+admin.site.register(Tarjetas)
+admin.site.register(Timbrados)
+admin.site.register(TipoBuses)
+admin.site.register(TipoPago)
+admin.site.register(TipoTarjeta)
+admin.site.register(Trayectos)
+
