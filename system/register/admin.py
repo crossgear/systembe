@@ -11,8 +11,12 @@ class PersonaAdmin(admin.ModelAdmin):
 class EmpresaAdmin(admin.ModelAdmin):
     list_display = ('nombre_razon_social','ruc', 'telefono', 'celular', 'direccion', 'actividad_economica')
     search_fields = ['nombre_razon_social','ruc', 'telefono', 'celular', 'direccion', 'actividad_economica']
-
+    
 class OperadorAdmin(admin.ModelAdmin):
+    list_filter = (
+        ('id_empresas', admin.RelatedOnlyFieldListFilter),
+    )
+    list_per_page = 10
     list_display = ('nombres', 'Apellidos', 'Cedula', 'Telefono', 'Celular', 'Direccion', 'fecha_nacimiento', 'empresa')
     search_fields = ['nombres', 'apellidos', 'cedula', 'telefono', 'celular', 'direccion', 'fecha_nacimiento', 'empresa']
 

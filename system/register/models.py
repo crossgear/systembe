@@ -26,18 +26,19 @@ class Empresas(models.Model):
         return self.nombre_razon_social
 
 
-
-
 class Operadores(models.Model):
     id_personas = models.ForeignKey('Personas', models.DO_NOTHING, db_column='id_personas')
     id_empresas = models.ForeignKey('Empresas', models.DO_NOTHING, db_column='id_empresas')
-
+    
 
     class Meta:
         managed = False
         db_table = 'operadores'
         verbose_name = 'Operador'
         verbose_name_plural = 'Operadores'
+        permissions = {
+            ('view_oper', 'View Operadores')
+        }
 
     def __str__(self):
         return str(self.id_personas) if self.id_personas else ''
