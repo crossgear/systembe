@@ -147,7 +147,7 @@ ADMIN_REORDER = (
     # Registro
     {'app': 'register', 'label': 'Registro',
     'models': ('register.Personas', 'register.Empresas', 
-    'register.Operadores')},
+    'register.Operadores', 'register.Sucursales')},
 
     # Transporte
     {'app': 'register', 'label': 'Transporte',
