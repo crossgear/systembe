@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'register',
     'admin_reorder',
+    'consulta',
     
     
 
@@ -62,7 +63,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates/admin/')
+            os.path.join(BASE_DIR, 'templates/')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

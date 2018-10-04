@@ -16,10 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from consulta import views
+from django.views.generic import TemplateView
+from django_filters.views import FilterView
+from consulta.filters import SearchComprobante
+
 
 urlpatterns = [
     path('',admin.site.urls),
     path('admin/', admin.site.urls),
+    path('consulta/',views.consulta, name='consulta'),
     path(
     'admin/password_reset/',
     auth_views.PasswordResetView.as_view(),

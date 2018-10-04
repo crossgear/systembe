@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit">Search</button>
+      </form>
+      
+      {% for comp in filter.qs %}
+        <li>{{ DetallesComprobantes.id_comp }} - {{ DetallesComprobantes.id_tarjetas }}</li>
+      {% endfor %}
+      
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for comp in filter.qs %}
+            <tr>
+              <td>{{ DetallesComprobantes.id_comp }}</td>
+              <td>{{ DetallesComprobantes.id_tarjetas }}</td>
+              <td></td>
+              <td></td>
+              {% endfor %}
+            </tr>
+        
+        </tbody>
+      </table>
+
+
+</body>
+</html>
